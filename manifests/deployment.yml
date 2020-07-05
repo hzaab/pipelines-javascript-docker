@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: hzaabpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: hzaabpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: hzaabpipelinesjavascriptdocker 
+          image: keplertraining.azurecr.io/hzaabpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
